@@ -25,11 +25,8 @@
   <body ng-app="amuse">
 
   <ion-pane ng-controller="AmuseScroll" >
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Amuse Main Screen</h1>
-      </ion-header-bar>
 
-      <ion-content class="has-header">
+      <ion-content>
 
 <!--           PULL TO REFRESH -->
           <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()">
@@ -40,9 +37,9 @@
               <ion-item ng-repeat="item in items" 
                         item="item"
                         href="#/item/{{item.id}}">
-<!--                 placeholder {{ item.id }} -->
+                placeholder {{ item.id }}
 
-                     <div style="margin-left:-5%;background-color:green;width:120.5%;height:300px; background-image: url({{item.url}})"> 
+                     <div style="margin-left:-5%;background-color:green;width:120.5%;height:300px; background-image: url({{item.url}})"></div>
 
 <!--                       <a class="button" ng-click="showImage(1)">Small</a> -->
 
@@ -53,6 +50,12 @@
             <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
 
       </ion-content>
+
+<div id="footer-main" class="bar bar-footer bar-balanced">
+  <button class="button button-clear pull-left">M</button>
+</div>
+
+
   </ion-pane>
 
 

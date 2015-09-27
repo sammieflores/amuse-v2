@@ -1,5 +1,11 @@
 /* Empty. Add your own CSS if you like */
 
+#footer-main{
+  background-color: #4d4d4d;
+  border-width: 0px;
+}
+
+
 /*PLACEHOLDER CSS*/
 .transparent {
   background: transparent !important;
