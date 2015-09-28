@@ -17,6 +17,16 @@
   background-color: #191919;
 }
 
+.main-feed-tiles{
+  margin-left:-5%;
+  background-color:#666666;
+  width:120.5%;
+  height:300px; 
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 
 /*PLACEHOLDER CSS*/
 .transparent {

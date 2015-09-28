@@ -32,16 +32,18 @@
           <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()">
           </ion-refresher>
 
-            <ion-list>
+            <ion-list id="amuse-list">
 
               <ion-item ng-repeat="item in items" 
                         item="item"
                         href="#/item/{{item.id}}">
                 placeholder {{ item.id }}
 
-                     <div style="margin-left:-5%;background-color:green;width:120.5%;height:300px; background-image: url({{item.url}})"></div>
+                     <div style="background-image: url({{item.url}});" class="main-feed-tiles"></div>
 
 <!--                       <a class="button" ng-click="showImage(1)">Small</a> -->
+
+
 
               </ion-item>
 
@@ -51,14 +53,19 @@
 
       </ion-content>
 
-<div id="footer-main" class="bar bar-footer bar-balanced">
-  <button class="button button-clear pull-left">M</button>
-</div>
-
+      <div id="footer-main" class="bar bar-footer bar-balanced">
+        <button class="button button-clear pull-left">M</button>
+      </div>
 
   </ion-pane>
 
+<!-- <ion-pane ng-controller="AmusePreview">
 
+  <ion-content>
+    <h1>IT WORKS</h1>
+  </ion-content>
+
+</ion-pane> -->
 
   </body>
 </html>
