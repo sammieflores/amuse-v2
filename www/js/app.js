@@ -30,25 +30,30 @@ angular.module('amuse', ['ionic'])
     }
     $scope.$broadcast('scroll.infiniteScrollComplete');
   };
+
+  $scope.nav = function () {
+    console.log("foo");
+    //href="#preview.html"
+  }
   
 
   $scope.items = [
 
-    { url:'http://a3.mzstatic.com/us/r30/Purple6/v4/16/d6/36/16d6363e-cca0-e40e-9054-6d588c0db8c4/icon175x175.jpeg' },
-    { title: 'amazing' },
-    { title: 'inspiring', },
-    { title: 'lovely' },
-    { title: 'sweet' },
-    { title: 'gorgeous' },
-    { title: 'unique' },
+    { url:'https://d13yacurqjgara.cloudfront.net/users/4988/screenshots/2269639/design-disruptors_1x.jpg' },
+    { url: 'https://d13yacurqjgara.cloudfront.net/users/11867/screenshots/2249937/adventure_d1_1x.jpg' },
+    { url: 'https://d13yacurqjgara.cloudfront.net/users/59947/screenshots/2269674/ship_dribble.jpg', },
+    { url: 'https://d13yacurqjgara.cloudfront.net/users/380693/screenshots/2240412/cc2_1x.jpg' },
+    { url: 'https://d13yacurqjgara.cloudfront.net/users/4601/screenshots/2237374/zambees_1x.jpg' },
+    { title: 'https://d13yacurqjgara.cloudfront.net/users/56801/screenshots/2269695/r_astronomy_1x.jpg' },
+    { title: 'https://d13yacurqjgara.cloudfront.net/users/688456/screenshots/2268954/ferrata2_1x.png' },
     { title: 'creative' }
 
   ];
   
-});
+})
 
 // PULL TO REFRESH
-app.controller('TodosCtrl', function($scope) {
+.controller('TodosCtrl', function($scope) {
   
   $scope.doRefresh = function() {
     $scope.$broadcast('scroll.refreshComplete');
