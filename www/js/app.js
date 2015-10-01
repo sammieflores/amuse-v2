@@ -19,7 +19,7 @@ angular.module('amuse', ['ionic'])
 })
 
 // INFINITE SCROLL CONTROLLER
-.controller('AmuseScroll', function($scope) {
+.controller('AmuseScroll', function($scope,$ionicModal) {
   $scope.noMoreItemsAvailable = false;
   
   $scope.loadMore = function() {
@@ -49,29 +49,18 @@ angular.module('amuse', ['ionic'])
     { title: 'creative' }
 
   ];
-  
-})
-
-// PULL TO REFRESH
-.controller('TodosCtrl', function($scope) {
-  
-  $scope.doRefresh = function() {
-    $scope.$broadcast('scroll.refreshComplete');
-    $scope.$apply()
-  };
-  
-})
-
-// IMAGE PREVIEW IN MODAL
-
-.controller('AmusePreview', function($scope, $ionicModal) {
+// style="background-image: url('https://d13yacurqjgara.cloudfront.net/users/688456/screenshots/2268954/ferrata2_1x.png');"
   $ionicModal.fromTemplateUrl('preview.html', {
     scope: $scope,
-    animation: 'slide-in-up'
+    animation: 'scale-in'
   }).then(function(modal) {
     $scope.modal = modal;
   });
-  $scope.openModal = function() {
+  $scope.openModal = function(url) {
+    // var tile = angular.element( document.querySelector( '#tile-image' ) );
+    // tile.css("background-image" ,"url('" + url + "')"));
+    //window.alert(tile);
+    $scope.bgImage = "url('" + url + "')";
     $scope.modal.show();
   };
   $scope.closeModal = function() {
@@ -89,4 +78,21 @@ angular.module('amuse', ['ionic'])
   $scope.$on('modal.removed', function() {
     // Execute action
   });
+  
+})
+
+// PULL TO REFRESH
+.controller('TodosCtrl', function($scope) {
+  
+  $scope.doRefresh = function() {
+    $scope.$broadcast('scroll.refreshComplete');
+    $scope.$apply()
+  };
+  
+})
+
+// IMAGE PREVIEW IN MODAL
+
+.controller('AmusePreview', function($scope, $ionicModal) {
+  
 });

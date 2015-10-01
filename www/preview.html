@@ -2,13 +2,15 @@
   <ion-header-bar>
     <h1 class="title">PREVIEW</h1>
     <div class="buttons">
-      <button class="button button-clear" ng-click="closePreview()">Close</button>
+      <button class="button button-clear" ng-click="closeModal()">Close</button>
     </div>
 
   </ion-header-bar>
-  <ion-content>
+  <ion-content class="preview-view">
 
-    <h1>IT WORKS</h1>
+  	<div class="preview-tiles" ng-style="{ 'background-image' : bgImage }">
+
+  	</div>
 
   </ion-content>
 </ion-modal-view>
